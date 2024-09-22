@@ -9,5 +9,6 @@ aiofiles
 streamlit
 python-multipart
 faiss-cpu
+sentence_transformers
 
 -e .
