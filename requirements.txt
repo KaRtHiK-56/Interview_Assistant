@@ -4,8 +4,10 @@ langchain-core
 ollama 
 pypdf 
 black 
-pydoc3
+pdoc3
 aiofiles
 streamlit
 python-multipart
 faiss-cpu
+
+-e .
