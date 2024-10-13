@@ -7,7 +7,6 @@ from langchain.chains.summarize import load_summarize_chain
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.chains import RetrievalQA
-import os
 from dotenv import load_dotenv
 from src.prompt import *
 

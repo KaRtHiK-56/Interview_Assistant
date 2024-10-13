@@ -9,7 +9,7 @@ from langchain.chains import RetrievalQA
 
 
 
-loader = PyPDFLoader(r"C:\Users\Devadarsan\Desktop\Karthik_projects\Interview_Assistant\ml.pdf")
+loader = PyPDFLoader(r"C:\Users\Devadarsan\Desktop\Karthik_projects\Interview_Assistant\data\ml.pdf")
 loader = loader.load()
 
 splitter = RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=300)
