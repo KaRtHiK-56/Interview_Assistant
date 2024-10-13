@@ -1,11 +1,11 @@
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.llms import Ollama
 from langchain.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 from dotenv import load_dotenv
 from src.prompt import *
@@ -21,14 +21,14 @@ def file_processing(file_path):
     for page in data:
         question_gen += page.page_content
         
-    splitter_ques_gen = RecursiveCharacterTextSplitter(chunk_size=2000,chunk_ovelap=400)
+    splitter_ques_gen = RecursiveCharacterTextSplitter(chunk_size=2000,chunk_overlap=400)
 
 
     chunks_ques_gen = splitter_ques_gen.split_text(question_gen)
 
     document_ques_gen = [Document(page_content=t) for t in chunks_ques_gen]
 
-    splitter_ans_gen = RecursiveCharacterTextSplitter(chunk_size=2000,chunk_ovelap=400)
+    splitter_ans_gen = RecursiveCharacterTextSplitter(chunk_size=2000,chunk_overlap=400)
 
 
     document_answer_gen = splitter_ans_gen.split_documents(
