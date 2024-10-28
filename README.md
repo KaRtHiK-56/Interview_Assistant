@@ -1,4 +1,4 @@
-# Interview_Assistant
+# Interview_Assistant_RAG
 
 ### **1. Introduction**
    - Brief overview of generative AI and its applications in educational and interview preparation.
